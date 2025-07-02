@@ -1,12 +1,23 @@
-# React + Vite
+# React Axios Kullanımı – Kullanıcı Listeleme Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, `axios` ile API'den veri çekme ve React bileşenlerinde asenkron veri yönetimini içeren basit bir kullanıcı listeleme uygulamasıdır.
 
-Currently, two official plugins are available:
+## 📁 Dosyalar ve İşlevleri
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `lib/axios.js`  
+  - Axios için özel bir instance oluşturur (`baseURL` tanımlıdır).
 
-## Expanding the ESLint configuration
+- `pages/Users.jsx`  
+  - `jsonplaceholder.typicode.com/users` adresinden kullanıcı verilerini çeker.  
+  - Yüklenme ve hata durumlarını yönetir.  
+  - Gelen kullanıcıları liste olarak ekrana basar.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `App.jsx`  
+  - Ana uygulama bileşeni.  
+  - `Users` bileşenini çağırır.
+
+## 🚀 Kurulum ve Çalıştırma
+
+```bash
+npm install
+npm run dev
